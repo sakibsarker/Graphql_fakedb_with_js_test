@@ -9,6 +9,7 @@ export const users=[
     {
         id:"4232",
         firstName:"Jannatul",
+        middleName:"Ferdousi",
         lastname:"Setu",
         email:"jannatul@gmail.com",
         password:"2345",
@@ -19,6 +20,18 @@ export const quotes=[
     {
         name:"I turn cofee into code",
         by:"23131"
+    },
+    {
+        name:"I am another quote",
+        by:"23131"
+    },
+    {
+        name:"If it works dont touch it",
+        by:"4232"
+    },
+    {
+        name:"If it works dont touch it",
+        by:"4232"
     },
     {
         name:"If it works dont touch it",
