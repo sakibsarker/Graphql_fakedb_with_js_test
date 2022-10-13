@@ -37,3 +37,10 @@ query getUserByID{
     email
   }
 }
+------------------------------------
+query getQuoteByUser{
+  iquote(by:"4232"){
+    name
+    by
+  }
+}

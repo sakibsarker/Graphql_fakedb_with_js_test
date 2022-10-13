@@ -9,10 +9,9 @@ export const users=[
     {
         id:"4232",
         firstName:"Jannatul",
-        middleName:"Ferdousi",
         lastname:"Setu",
         email:"jannatul@gmail.com",
-        password:"2345",
+        password:"12345",
     }
 ]
 
@@ -28,13 +27,6 @@ export const quotes=[
     {
         name:"If it works dont touch it",
         by:"4232"
-    },
-    {
-        name:"If it works dont touch it",
-        by:"4232"
-    },
-    {
-        name:"If it works dont touch it",
-        by:"4232"
-    },
+    }
+
 ]
