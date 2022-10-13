@@ -1,0 +1,11 @@
+--------------------------
+# Write your query or mutation here
+query getAllUsers{
+  users{
+    id
+    firstName
+    lastname
+    email
+    password
+  }
+}
