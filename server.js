@@ -5,6 +5,7 @@ import { users,quotes } from "./fakedb.js";
 const typeDefs=gql`
 type Query{
     users:[user]
+    user(id:ID!):user
     quotes:[quote]
 }
 type user{
@@ -24,11 +25,12 @@ type quote{
 const resolvers={
     Query:{
         users:()=>users,
-        quotes:()=>quotes
+        quotes:()=>quotes,
+        user:(_,{id})=>users.find(user=>user.id==id)
     },
     user:{
         quotes:(ur)=>quotes.filter(quote=>quote.by==ur.id)
-    }
+    },
 }
 
 const server= new ApolloServer({
