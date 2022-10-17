@@ -11,14 +11,11 @@ const resolvers={
         quotes:(ur)=>quotes.filter(quote=>quote.by==ur.id)
     },
     Mutation:{
-        signupUser:(_,{firstName,lastName,email,password})=>{
+        signupUser:(_,{userNew})=>{
             const id=randomBytes(5).toString("hex")
             users.push({
                 id,
-                firstName,
-                lastName,
-                email,
-                password,
+                ...userNew
             })
 
             return users.find(user=>user.id==id)

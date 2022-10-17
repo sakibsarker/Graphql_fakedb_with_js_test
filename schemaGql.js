@@ -20,7 +20,14 @@ type quote{
 }
 
 type Mutation{
-    signupUser(firstName:String!,lastName:String!,email:String!,password:String!):user
+    signupUser(userNew:UserInput!):user
+}
+
+input UserInput{
+    firstName:String!
+    lastName:String!
+    email:String!
+    password:String!
 }
 
 `

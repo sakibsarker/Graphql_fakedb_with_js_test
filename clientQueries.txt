@@ -68,3 +68,14 @@ mutation{
   }
   
 }
+-----------------------------
+mutation CreateUser($userNew:UserInput!){
+  signupUser(userNew:$userNew){
+    id
+    email
+    firstName
+    lastName
+    password
+  }
+  
+}
