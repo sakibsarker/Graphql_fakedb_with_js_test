@@ -2,14 +2,14 @@ export const users=[
     {
         id:"23131",
         firstName:"sakib",
-        lastname:"sarker",
+        lastName:"sarker",
         email:"sakib153824@diu.edu.bd",
         password:"12345",
     },
     {
         id:"4232",
         firstName:"Jannatul",
-        lastname:"Setu",
+        lastName:"Setu",
         email:"jannatul@gmail.com",
         password:"12345",
     }

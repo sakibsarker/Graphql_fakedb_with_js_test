@@ -44,3 +44,27 @@ query getQuoteByUser{
     by
   }
 }
+----------------------------------
+query getUserByID($userid:ID!){
+  user(id:$userid){
+    id
+    firstName
+    lastname
+    email
+    quotes{
+      name
+    }
+  }
+}
+
+------------------------------------------
+mutation{
+  signupUser(firstName:"Sakib",lastName:"sarker",email:"sakib@gmail.com",password:"123"){
+    id
+    email
+    firstName
+    lastName
+    password
+  }
+  
+}
