@@ -2,7 +2,7 @@
 # Write your query or mutation here
 query getAllUsers{
   users{
-    id
+    _id
     firstName
     lastname
     email
@@ -18,7 +18,7 @@ query getQuotes{
 ------------------------------
 query getAllUsers{
   users{
-   id
+   _id
     firstName
     lastname
     email
@@ -30,8 +30,8 @@ query getAllUsers{
 }
 -------------------------------
 query getUserByID{
-  user(id:"23131"){
-    id
+  user(_id:"23131"){
+    _id
     firstName
     lastname
     email
@@ -45,9 +45,9 @@ query getQuoteByUser{
   }
 }
 ----------------------------------
-query getUserByID($userid:ID!){
-  user(id:$userid){
-    id
+query getUserByID($user_id:ID!){
+  user(_id:$user_id){
+    _id
     firstName
     lastname
     email
@@ -60,7 +60,7 @@ query getUserByID($userid:ID!){
 ------------------------------------------
 mutation{
   signupUser(firstName:"Sakib",lastName:"sarker",email:"sakib@gmail.com",password:"123"){
-    id
+    _id
     email
     firstName
     lastName
@@ -71,11 +71,38 @@ mutation{
 -----------------------------
 mutation CreateUser($userNew:UserInput!){
   signupUser(userNew:$userNew){
-    id
+    _id
     email
     firstName
     lastName
     password
+  }
+  
+}
+---------------------------------
+mutation CreateUser($userNew:UserInput!){
+  user:signupUser(userNew:$userNew){
+    _id
+    email
+    firstName
+    lastName
+    password
+  }
+  
+}
+--------------------------------
+mutation signinUser($userSignin:UserSigninInput!){
+  user:signinUser(userSignin:$userSignin){
+    token
+  }
+  
+}
+quary variables
+-------------------------------------
+{
+  "userSignin": {
+    "email": "sakib420@gmsail.com",
+    "password": "123"
   }
   
 }
